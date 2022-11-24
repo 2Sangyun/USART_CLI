@@ -32,6 +32,7 @@ void CommandMd(uint8_t argc, char* argv[]);
 void CommandLed(uint8_t argc, char* argv[]);
 void CommandFwDownload(uint8_t argc, char* argv[]);
 void CommandRunApplication(uint8_t argc, char* argv[]);
+void CommandErase(uint8_t argc, char* argv[]);
 int FindCommands(char* cmd_buff, char* tab_buff);
 
 

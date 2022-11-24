@@ -1,18 +1,10 @@
-14:34:14 **** Incremental Build of configuration Debug for project IAP_BL ****
+16:58:59 **** Incremental Build of configuration Debug for project IAP_BL ****
 make -j8 all 
-arm-none-eabi-gcc "../Core/Src/circular_queue.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/circular_queue.d" -MT"Core/Src/circular_queue.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/circular_queue.o"
-arm-none-eabi-gcc "../Core/Src/cli_command.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/cli_command.d" -MT"Core/Src/cli_command.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/cli_command.o"
-arm-none-eabi-gcc -o "IAP_BL.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\yoojihyeon\STM32CubeIDE\workspace_IAP_BL\IAP_BL\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="IAP_BL.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: IAP_BL.elf
- 
 arm-none-eabi-size   IAP_BL.elf 
-arm-none-eabi-objdump -h -S  IAP_BL.elf  > "IAP_BL.list"
    text	   data	    bss	    dec	    hex	filename
-  33340	   2624	   8136	  44100	   ac44	IAP_BL.elf
+  33384	   2624	   8136	  44144	   ac70	IAP_BL.elf
 Finished building: default.size.stdout
  
-Finished building: IAP_BL.list
- 
 
-14:34:16 Build Finished. 0 errors, 0 warnings. (took 1s.360ms)
+16:59:00 Build Finished. 0 errors, 0 warnings. (took 384ms)
 

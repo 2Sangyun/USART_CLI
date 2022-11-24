@@ -20,6 +20,7 @@ char commands[MAX_CMD_NUM][MAX_CMD_BUFFER_LENGTH] =
 		"led",
 		"download",
 		"run",
+		"erase"
 };
 CommandSet commandSet[MAX_CMD_NUM];
 
@@ -40,6 +41,7 @@ void CommandInit()
 	commandSet[3].CommandFuncPtr = CommandLed;
 	commandSet[4].CommandFuncPtr = CommandFwDownload;
 	commandSet[5].CommandFuncPtr = CommandRunApplication;
+	commandSet[6].CommandFuncPtr = CommandErase;
 
 }
 
@@ -149,6 +151,10 @@ void CommandRunApplication(uint8_t argc, char* argv[])
 	RunApplication();
 }
 
+void CommandErase(uint8_t argc, char* argv[])
+{
+	FLASH_If_Erase(APPLICATION_ADDRESS);
+}
 
 void CommandLed(uint8_t argc, char* argv[])
 {
